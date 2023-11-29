@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDE3DD;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+}
+
+.image {
+    flex: 1.7;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    max-height: 100%; 
+    object-fit: cover;
+}
+
+.content {
+    flex: 1.5;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.monserrat, .fraunces, .monserrat1, .pacifico {
+    margin: 0;  
+}
+
+.monserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px; /* Añade espacio en la parte inferior */
+}
+
+.fraunces {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 45px;
+    padding-left: 20px;
+    margin-bottom: 15px; 
+}
+
+.monserrat1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-left: 45px;  
+    margin-bottom: 15px;
+    position: relative; 
+}
+
+.monserrat1::after {
+    content: ""; 
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #C9C9C8; 
+}
+
+.pacifico {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    padding-left: 20px;
+    color: #456427; 
+    margin-bottom: 15px; 
+}
+
+.prices {
+    display: flex;  
+    align-items: center;  
+    margin-bottom: 15px; 
+}
+
+.btn {
+    width: 100%;
+    height: 50px; 
+    font-size: 18px; 
+}
+
+.btn i {
+    margin-right: 15px; 
+}
+
+@media (max-width: 780px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .image, .content {
+        flex: auto; 
+    }
+
+    .image img {
+        max-height: 50vh;
+    }
+}
+
